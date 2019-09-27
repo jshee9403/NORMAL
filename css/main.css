@@ -4,10 +4,6 @@
 body.bg {background: #f0f0f0 !important;}
 
 #header {height: 74px; line-height: 74px; background: none; opacity: 0;}
-/* #header.bg {border-color: rgba(0,0,0,0.4); color: #000;}
-#header.bg nav ul li {color: #000 !important;}
-#header.bg nav ul li.on {text-shadow: 0 0 20px rgba(0,0,0,0.4);}
-#header.bg nav ul li.off {color: #999 !important;} */
 
 #header.view {opacity: 1;}
 section {height: 940px;}

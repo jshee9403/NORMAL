@@ -133,6 +133,7 @@ $(document).ready(function(){
     var imgPos1 = parseInt($culImg.eq(0).css("top"));
     var imgPos2 = parseInt($culImg.eq(1).css("top"));
     var bgC = ["#1F3670", "#CE4442", "#D69146", "#052F2D"];
+    var imgAlt = [["세상에서 가장 따뜻한색 블루", "그레이의 50가지 그림자"], ["미스터쇼 포스터1", "미스터쇼 포스터2"], ["ON ART SESSO포스터", "REVERSE19 포스터"], ["The Casual Vacancy", "그레이의 50가지 그림자"]];
 
     $("#m_culture ul li a").on({
         "mouseenter focus": function(){
@@ -140,18 +141,18 @@ $(document).ready(function(){
             var imgSrc2 = $(this).data("src2");
             var downImg = $(this).parent().index();
 
-            $culImg.eq(0).attr("src", imgSrc1).css({zIndex: 50}).css({display: "block"}, 300).stop().animate({top: imgPos1 + (downImg+1)*150}, 800, "easeOutQuart");
+            $culImg.eq(0).attr({src: imgSrc1, alt: imgAlt[downImg][0]}).css({zIndex: 50}).css({display: "block"}, 300).stop().animate({top: imgPos1 + (downImg+1)*150}, 800, "easeOutQuart");
 
-            $culImg.eq(1).attr("src", imgSrc2).css({zIndex: 50}).css({display: "block"}, 300).stop().animate({top: imgPos2 + (downImg+1)*160}, 1200, "easeOutQuart");
+            $culImg.eq(1).attr({src: imgSrc2, alt: imgAlt[downImg][1]}).css({zIndex: 50}).css({display: "block"}, 300).stop().animate({top: imgPos2 + (downImg+1)*160}, 1200, "easeOutQuart");
 
-            $(this).parent().css({zIndex: 100}).stop().animate({opacity: 1}, 500).siblings().css({zIndex: 20}).stop().animate({opacity: 0.3}, 500);
+            $(this).parent().css({zIndex: 100}).stop().animate({opacity: 1}, 500).siblings().css({zIndex: 20}).stop().animate({opacity: 0.1}, 500);
 
             $("body").stop().animate({backgroundColor: bgC[downImg]}, 100);
         },
 
         "mouseleave blur": function(){
             $("#m_culture .cul_imgbox img").css({display: "none"});
-            $(this).parent().css({opacity: 0.3});
+            $(this).parent().animate({opacity: 0.2}).siblings().stop().animate({opacity: 0.2}, 500);
             $("body").stop().animate({backgroundColor: "#000"}, 100);
         }
         
@@ -229,12 +230,13 @@ $(document).ready(function(){
                 $("#m_redroom").stop().animate({opacity: 0}, 600);
                 $header.addClass("bg");
                 $(".move_top").addClass("bg");
-
+                $("#follow").addClass("bg");
             } else {
                 $("body").removeClass("bg");
                 $("#m_redroom").stop().animate({opacity: 1}, 700, "easeOutBounce");
                 $header.removeClass("bg");
                 $(".move_top").removeClass("bg");
+                $("#follow").removeClass("bg");
             }
         },10);
 

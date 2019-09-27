@@ -94,14 +94,16 @@
         url("../font/DS-DIGI.TTF") format("truetype");
 }
 
+html{cursor: url(../images/common/cursorW.png), auto;}
+
 /* reset */
 body, ul , h1, h2, h3, h4, h5, h6, a, p, figure, figcaption, button, th, td {margin: 0; padding: 0;}
 h1, h2, h3, h4, h5, h6 {font-size: 100%; font-weight: normal;}
 header, nav, aside, section, article, footer {display: block;}
 body {background: #000; color: #f0f0f0; font-family: Chosunilbo_myungjo; font-weight: 400;}
 ul {list-style: none;}
-a:link, a:visited, a:hover, a:active {text-decoration: none; color: inherit;}
-button {background: none; border: none; cursor: pointer;}
+a:link, a:visited, a:hover, a:active {text-decoration: none; color: inherit; cursor: url(../images/common/cursorB.png), auto;}
+button {background: none; border: none; cursor: url(../images/common/cursorB.png), auto;}
 img {vertical-align: top; border: none;}
 strong {font-style: normal; font-weight: normal;}
 
@@ -183,3 +185,8 @@ strong {font-style: normal; font-weight: normal;}
 .move_top {position: fixed; bottom: 30px; right: 0; z-index: 900; display: block; width: 60px; height: 96px; opacity: 0; transition: all 0.8s ease-in-out; background: url(../images/common/btn_totop.png);}
 .move_top.view {opacity: 1;}
 .move_top.bg {background: url(../images/common/btn_totopbg.png);}
+
+/* follow */
+#follow div {position: absolute; z-index: 1000; border-radius: 50%; background: #af0000;}
+#follow div {position: absolute; z-index: 1000; border-radius: 50%; background: #af0000;}
+#follow.bg div {background: #000;}

@@ -243,6 +243,13 @@
 .ei_content .cnt4 div strong span {color: #e7ae6c;}
 .ei_content .cnt4 div p {width: 685px; padding-left: 120px;}
 
+.ei_content li img, .ei_content li div {opacity: 0; transition: all 0.8s;}
+.ei_content li img {transform: translateY(-100px);}
+.ei_content li div {transform: translateY(100px);}
+
+.ei_content li.on img, .ei_content li.on div {transform: translateY(0); opacity: 1;}
+
+
 
 /* culture-----------------------------------------------------------------------------------------------*/
 
@@ -315,10 +322,15 @@ transform: rotate(90deg); transform-origin: left bottom;}
 #s_contents p {padding-bottom: 20px; font-size: 18px; line-height: 1.5em; text-align: left; font-family: NotoS;}
 #s_contents span {font-size: 16px; letter-spacing:0.1; font-family: 'Chosunilbo_myungjo'; font-weight: 700; position: relative;}
 
-#s_contents .align_r span{ display: inline-block;  height: 35px; line-height: 30px; border: 1px solid #eee; background: #e6ebee; border-radius:20px;  box-sizing: border-box; padding: 0 8px;}
+#s_contents .align_r span{ display: inline-block;  height: 35px; line-height: 30px; border: 1px solid #dfdfdf; background: #f8f3d8; border-radius:20px;  box-sizing: border-box; padding: 0 8px;}
 #s_contents .align_r span + span {margin-left: 12px;}
-#s_contents .align_l span{ display: inline-block;  height: 35px; line-height: 30px; border: 1px solid #eee; background: #e6ebee; border-radius:20px; box-sizing: border-box; padding: 0 8px;}
+#s_contents .align_rr span{ display: inline-block;  height: 35px; line-height: 30px; border: 1px solid #dfdfdf; background: #e1f5fe; border-radius:20px;  box-sizing: border-box; padding: 0 8px;}
+#s_contents .align_rr span + span {margin-left: 12px;}
+#s_contents .align_l span{ display: inline-block;  height: 35px; line-height: 30px; border: 1px solid #dfdfdf; background: #fce4ec; border-radius:20px; box-sizing: border-box; padding: 0 8px;}
 #s_contents .align_l span + span {margin-left: 12px;}
+#s_contents .align_ll span{ display: inline-block;  height: 35px; line-height: 30px; border: 1px solid #dfdfdf; background: #c0eec2; border-radius:20px; box-sizing: border-box; padding: 0 8px;}
+#s_contents .align_ll span + span {margin-left: 12px;}
+
 
 #s_contents .calender >div {padding-bottom: 262px;}
 #s_contents .calender >div::after {content:""; display:block; clear: both;}
@@ -330,10 +342,12 @@ transform: rotate(90deg); transform-origin: left bottom;}
 #s_contents .calender >div img.fade.on {opacity: 1; left: 0; }
 #s_contents .calender div div {padding-top: 253px; float: right;}
 #s_contents .calender div .align_r {float: left; padding-top: 253px;}
+#s_contents .calender div .align_rr {float: left; padding-top: 253px;}
+
 
 #s_contents .calender >div:nth-child(4) {padding-bottom: 443px;}
 
-#s_contents .calender >div:nth-child(1) span {color: #eaa001; float: left;}
+#s_contents .calender >div:nth-child(1) span {color: #f9a825; float: left;}
 #s_contents .calender >div:nth-child(2) span {color: #c30818;}
 #s_contents .calender >div:nth-child(3) span {color: #0d2378 ;}
 #s_contents .calender >div:nth-child(4) span {color: #005d40; }
@@ -345,10 +359,10 @@ transform: rotate(90deg); transform-origin: left bottom;}
 #s_contents .s_pp li a img {display: block; width: 100%; transition: .3s ease-in-out;}
 #s_contents .s_pp li a p {margin-top:38px; }
 #s_contents .s_pp li a p span{display: block; text-align: center;}
-#s_contents .s_pp li a p .name{font-size: 22px; font-family: NotoS; margin-bottom: 18px; font-weight: 400;}
-#s_contents .s_pp li a p .price {font-size: 18px; font-family: NotoS; color: #777; font-weight: 400;}
+#s_contents .s_pp li a p .name{font-size: 22px; font-family: NotoS; margin-bottom: 18px;}
+#s_contents .s_pp li a p .price {font-size: 18px; font-family: NotoS; color: #777;}
 
-.s_contentss  {position: relative; width: 1224px; height: 932px; margin: 500px auto;}
+.s_contentss  {position: relative; width: 1224px; height: 932px; margin: 0 auto;}
 .s_contentss h3 {padding-bottom:244px; }
 .s_contentss h3 img { width: 1220px;}
 
@@ -359,7 +373,6 @@ transform: rotate(90deg); transform-origin: left bottom;}
 .s_contentss table .day th {font-size: 50px; font-family: Neo; padding-bottom: 60px;}
 .s_contentss table  td a {font-size: 55px;   font-family: Neo; float: right; margin-right:65px;}
 .s_contentss table  td {text-align: center;}
-.s_contentss table  td.Oct {color: rgba(0,0,0,0.2);}
 
 .s_contentss table {position: relative;}
 
@@ -376,7 +389,6 @@ transform: rotate(90deg); transform-origin: left bottom;}
 .s_contentss table .week3 td:nth-child(1) a {color: #c30818;}
 .s_contentss table .week4 td:nth-child(1) a {color: #c30818;}
 .s_contentss table .week5 td:nth-child(1) a {color: #c30818;}
-
 
 .s_pp li a img:hover {box-shadow:0 0.5em 0.5em -0.4em #000; transform:translatey(-0.65em); }
 
@@ -395,6 +407,66 @@ transform: rotate(90deg); transform-origin: left bottom;}
     }
 
 }
+
+
+/* scal_sub */
+/*banner*/
+#SC_produtbanner {width: 100%; height: 790px; background:#ccc; background: url('../images/calender/product_ban03.jpg')no-repeat top center;}
+#SC_produtbanner .produtTitle_area{display: block; width: 1224px; height:790px; margin: 0 auto;}
+#SC_produtbanner .produtTitle_area h2{position: absolute; top: 330px; line-height: 1.2em; font-family: 'Chosunilbo_myungjo'; font-size: 60px; color: #fff;}
+#SC_produtbanner .produtTitle_area h2 > span{color: #af0000;}
+#SC_produtbanner .produtTitle_area p {position: absolute; font-family: NotoS; font-size: 20px; left: 50%; top: 410px; color: #fff; margin-left: -140px;}
+
+/*SC_subCnt01*/
+#SC_subCnt01 {position: relative; color: #000; }
+#SC_subCnt01 > a{position: absolute; top:40px; left:50%; margin-left:667px; display: block;  width: 100px; height: 100px;  background: #ffa8af; border-radius: 50%; box-shadow: 1px 1px 5px #8d5d61; animation: bounce 2s infinite cubic-bezier(.50,.68,.42,.11);}
+#SC_subCnt01 >a img{display: block; width: 70px; height: 60px; margin: 20px 15px;  }
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li > img, #SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li .txt {color: #000; font-family: NotoS;}
+#SC_subCnt01 .SsubCnt01_area {position: relative; width: 1224px; margin: 0 auto;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_title{padding: 40px 0 100px 0; text-align: center;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_title > h3{font-family: Neo; font-size: 50px;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_title > p {font-family: NotoS; font-size: 20px;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li{width: 1224px; margin-bottom: 200px;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li strong{display: block; font-size: 40px; margin-bottom: 50px;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li p{font-size: 16px; text-align:justify; line-height:38px;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list .txt{float: left; text-align: justify;}
+
+ 
+/*odd*/
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li.odd img  {float: left;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li.odd .txt {float: right}
+/*even*/
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li.even img{float: right;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li.even .txt{float: left;}
+
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li:nth-child(1) .txt{width: 600px; height: 400px; box-sizing: border-box; padding-top:120px;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li:nth-child(2) .txt{width: 597px; height: 600px; box-sizing: border-box; padding-top:120px;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li:nth-child(3) .txt{width: 470px;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li .more{margin-top: 10px; width: 100px; height: 30px; background: #000; color: #fff; transition: all 0.3s;}
+#SC_subCnt01 .SsubCnt01_area .SsubCnt01_list li .more:hover{border-radius:10px;}
+/**/
+#SC_subCnt01 .SsubCnt01_area .APP {left: 50%; margin-left: -100px; position: absolute; cursor: pointer; font-family: NotoS; font-size: 20px;  width: 150px; height: 50px; background: none; border: 2px solid orange; transition: all 0.3s;}
+#SC_subCnt01 .SsubCnt01_area .APP:hover{background: orange; color: #fff; ; border-radius:20px;}
+
+/* .up, .down, .left, .right 효과 */
+#SC_subCnt01 .fade .up,
+#SC_subCnt01 .fade .down,
+#SC_subCnt01 .fade .left,
+#SC_subCnt01 .fade .right
+{position: relative; transition: all 0.5s;opacity: 0;}/* opacity: 0; */
+
+#SC_subCnt01 .fade.on .up,
+#SC_subCnt01 .fade.on .down,
+#SC_subCnt01 .fade.on .left,
+#SC_subCnt01 .fade.on .right
+{opacity: 1;}
+
+/* 수직방향 */
+#SC_subCnt01 .fade .up{top: 50px;}
+#SC_subCnt01 .fade .down{top: -50px;}
+#SC_subCnt01 .fade.on .up, #SC_subCnt01 .fade.on .down{top: 0;}
+
+
 
 
 /* redroom------------------------------------------------------------------------------------------ */

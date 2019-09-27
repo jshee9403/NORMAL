@@ -41,4 +41,18 @@ $(document).ready(function(){
         return false;
     });
 
+
+    $("#follow div").each(function(idx){
+        $(this).css({width: 3*(idx*0.6+1), height: 3*(idx*0.6+1), opacity: 0.1*(idx*0.3)});
+    });
+
+    $(document).on("mousemove", function(e){
+        var mouseX = e.pageX;
+        var mouseY = e.pageY;
+
+        $("#follow div").each(function(idx){
+            $(this).stop(true, false).delay(40*(idx+1)).animate({top: mouseY + 50, left: mouseX + 25}, 900, "easeOutQuart");
+        });
+    });
+
 });
